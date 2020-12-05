@@ -9,22 +9,21 @@ $font : 'Poppins', sans-serif;
     padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
+    font-family: $font;
 }
 
 body{
-    margin: 10% auto;
+    padding: 19% 0;
     background-color: #2E2E2E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     #content{
-        padding: 5%;
-        border-radius: 40px;
+        border-radius: 10px;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         background-color: $color-gray;
-        width: 700px;
-        height: 500px;
+        width: 40%;
+        height: 50%;
+        transform: scale(1.5);
         #setting{
+            padding: 5%;
             .box{
                 float: none;
                 margin: 10px;
@@ -32,6 +31,7 @@ body{
                 font-family: $font;
                 font-weight: bold;
                 font-size: 20px;
+                cursor: default;
                 .checkmark{
                     display: block;
                     width: 20px;
@@ -42,6 +42,7 @@ body{
                     transition: all .2s;
                     float: left;
                     margin: 5px;
+                    cursor: pointer;
                     &::after{
                         content: "";
                         position: absolute;
@@ -58,16 +59,86 @@ body{
                     background-color: $color-blue;
                 }
             }
-            #slider{
-                &:hover{
-
+            #sliderdiv{
+                #slider{
+                    -webkit-appearance: none;
+                    width: 36%;
+                    height: 7px;
+                    margin: 10px;
+                    background: $color-white;
+                    outline: none;
+                    transition: all .2s;
+                    border-radius: 500px;
+                    &::-webkit-slider-thumb{
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background-color: $color-blue;
+                        cursor: pointer;
+                    }
+                    &::-moz-range-thumb{
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background: #4CAF50;
+                        cursor: pointer;
+                    }
+                    &::-moz-range-progress{
+                        height: 100%;
+                        background-color: $color-blue;
+                    }
                 }
-                &::-webkit-slider-thumb{
-
+                #slider-value{
+                    font-family: $font;
+                    color: $color-white;
+                    position: absolute;
+                    font-weight: 500;
+                    font-size: 18px
                 }
-                &::-moz-range-thumb{
-                    
-                }
+            }
+        }
+        #output{
+            display: flex;
+            flex-grow: 3;            
+            background-color: $color-white;
+            align-content:stretch;
+            width: 100%;
+            height: 2.5em;
+            border-radius: 10px;
+            #password-output{
+                height: 100%;
+                width: 70%;
+                position: relative;
+                left: 0;
+                width: 78%;
+                outline: none;
+                padding-left: 5%;
+                border: none;
+                border-radius: 0;
+                background-color: $color-white;
+                font-size: 15px;
+                border-bottom-left-radius: 10px;
+            }
+            #rest{
+                display: grid;
+                place-items: center;
+                background-color: #D9E1E3;
+                width: 2.5em;
+                color: $color-gray;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            #copy{
+                display: grid;
+                place-items: center;
+                width: 3rem;
+                color: $color-gray;
+                font-size: 23px;
+                cursor: pointer;
+                background-color: $color-white;
+                border-bottom-right-radius: 10px;
             }
         }
     }

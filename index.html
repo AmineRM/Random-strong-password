@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random strong password</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
     
@@ -13,7 +15,7 @@
         <div id="setting">
 
             <div class="box">
-                <input type="checkbox" id="Symbol" class="checkbox" hidden>
+                <input type="checkbox" id="Symbol" class="checkbox" hidden checked>
                 <label for="Symbol" class="checkmark"></label> Symbol
             </div>
 
@@ -23,32 +25,34 @@
             </div>
 
             <div class="box">
-                <input type="checkbox" id="Upper" class="checkbox" hidden>
+                <input type="checkbox" id="Upper" class="checkbox" hidden checked>
                 <label for="Upper" class="checkmark"></label> First letter upper case
             </div>
 
-            <div>
+            <div id="sliderdiv">
                 <input type="range" min="4" max="40" value="8" id="slider">
+                <span id="slider-value">8</span>
             </div>
 
         </div>
-        <!--div id="output">
+        <div id="output">
 
-            <input type="text">
+            <input type="text" id="password-output" title="password">
 
-            <span id="rest">
-                <img src="./icon/rest.svg">
-            </span>
+            <div id="rest" title="Rest">
+                <i class="fas fa-undo"></i>
+            </div>
 
-            <span id="copy">
-                <img src="./icon/copy.svg">
-            </span>
+            <div id="copy" title="Copy">
+                <i class="far fa-copy"></i>            
+            </div>
             
-        </div-->
+        </div>
 
     </div>
 
-    <script src="./js/script.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/password.js"></script>
+    <script src="./js/clipborder.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
+var text_value = document.querySelector("#slider-value");
+var slider = document.querySelector("#slider");
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
+slider.addEventListener("mousemove" ,function() {
+    text_value.innerHTML = slider.value;
+});

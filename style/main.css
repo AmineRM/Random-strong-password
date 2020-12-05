@@ -4,30 +4,27 @@
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  margin: 10% auto;
+  padding: 19% 0;
   background-color: #2E2E2E;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 body #content {
-  padding: 5%;
-  border-radius: 40px;
+  border-radius: 10px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   background-color: #393939;
-  width: 700px;
-  height: 500px;
+  width: 40%;
+  height: 50%;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+body #content #setting {
+  padding: 5%;
 }
 
 body #content #setting .box {
@@ -37,6 +34,7 @@ body #content #setting .box {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 20px;
+  cursor: default;
 }
 
 body #content #setting .box .checkmark {
@@ -51,6 +49,7 @@ body #content #setting .box .checkmark {
   transition: all .2s;
   float: left;
   margin: 5px;
+  cursor: pointer;
 }
 
 body #content #setting .box .checkmark::after {
@@ -68,5 +67,101 @@ body #content #setting .box .checkmark::after {
 
 body #content #setting .box #Symbol:checked ~ .checkmark, body #content #setting .box #Number:checked ~ .checkmark, body #content #setting .box #Upper:checked ~ .checkmark {
   background-color: #0090FF;
+}
+
+body #content #setting #sliderdiv #slider {
+  -webkit-appearance: none;
+  width: 36%;
+  height: 7px;
+  margin: 10px;
+  background: #FFFFFF;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-radius: 500px;
+}
+
+body #content #setting #sliderdiv #slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #0090FF;
+  cursor: pointer;
+}
+
+body #content #setting #sliderdiv #slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+body #content #setting #sliderdiv #slider::-moz-range-progress {
+  height: 100%;
+  background-color: #0090FF;
+}
+
+body #content #setting #sliderdiv #slider-value {
+  font-family: "Poppins", sans-serif;
+  color: #FFFFFF;
+  position: absolute;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+body #content #output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  background-color: #FFFFFF;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  width: 100%;
+  height: 2.5em;
+  border-radius: 10px;
+}
+
+body #content #output #password-output {
+  height: 100%;
+  width: 70%;
+  position: relative;
+  left: 0;
+  width: 78%;
+  outline: none;
+  padding-left: 5%;
+  border: none;
+  border-radius: 0;
+  background-color: #FFFFFF;
+  font-size: 15px;
+  border-bottom-left-radius: 10px;
+}
+
+body #content #output #rest {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #D9E1E3;
+  width: 2.5em;
+  color: #393939;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+body #content #output #copy {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  color: #393939;
+  font-size: 23px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-bottom-right-radius: 10px;
 }
 /*# sourceMappingURL=main.css.map */

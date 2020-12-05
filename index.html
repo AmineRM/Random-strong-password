@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random strong password</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+    
+    <div id="content">
+
+        <div id="setting">
+
+            <div class="box">
+                <input type="checkbox" id="Symbol" class="checkbox" hidden>
+                <label for="Symbol" class="checkmark"></label> Symbol
+            </div>
+
+            <div class="box">
+                <input type="checkbox" id="Number" class="checkbox" hidden>
+                <label for="Number" class="checkmark"></label> Number
+            </div>
+
+            <div class="box">
+                <input type="checkbox" id="Upper" class="checkbox" hidden>
+                <label for="Upper" class="checkmark"></label> First letter upper case
+            </div>
+
+            <div>
+                <input type="range" min="4" max="40" value="8" id="slider">
+            </div>
+
+        </div>
+        <!--div id="output">
+
+            <input type="text">
+
+            <span id="rest">
+                <img src="./icon/rest.svg">
+            </span>
+
+            <span id="copy">
+                <img src="./icon/copy.svg">
+            </span>
+            
+        </div-->
+
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/slider.js"></script>
+</body>
+</html>

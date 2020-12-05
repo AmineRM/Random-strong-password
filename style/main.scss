@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$color-blue : #0090FF;
+$color-white : #FFFFFF;
+$color-gray : #393939;
+$font : 'Poppins', sans-serif;
+
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 10% auto;
+    background-color: #2E2E2E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #content{
+        padding: 5%;
+        border-radius: 40px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        background-color: $color-gray;
+        width: 700px;
+        height: 500px;
+        #setting{
+            .box{
+                float: none;
+                margin: 10px;
+                color: $color-white;
+                font-family: $font;
+                font-weight: bold;
+                font-size: 20px;
+                .checkmark{
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $color-white;
+                    clip-path: circle(50% at 50% 50%);
+                    position: relative;
+                    transition: all .2s;
+                    float: left;
+                    margin: 5px;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 7px;
+                        height: 14px;
+                        border-right: 3px $color-white solid;
+                        border-bottom: 3px $color-white solid;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotateZ(40deg) scale(0.75);
+                    }
+                }
+                #Symbol:checked ~ .checkmark, #Number:checked ~ .checkmark, #Upper:checked ~ .checkmark{
+                    background-color: $color-blue;
+                }
+            }
+            #slider{
+                &:hover{
+
+                }
+                &::-webkit-slider-thumb{
+
+                }
+                &::-moz-range-thumb{
+                    
+                }
+            }
+        }
+    }
+}

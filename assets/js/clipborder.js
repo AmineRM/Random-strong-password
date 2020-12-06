@@ -8,5 +8,4 @@ copy.addEventListener("click" , function() {
     temp.select();
     document.execCommand('copy');
     document.body.removeChild(temp);
-    alert('\"' + input.value + '\"' + ' copyed');
 })

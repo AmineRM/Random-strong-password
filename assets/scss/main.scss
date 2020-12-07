@@ -23,11 +23,12 @@ body{
             .box{
                 float: none;
                 margin: 10px;
+                cursor: default;
                 color: $color-white;
                 font-family: $font;
                 font-weight: bold;
                 font-size: 20px;
-                cursor: default;
+                user-select: none;
                 .checkmark{
                     display: block;
                     width: 20px;

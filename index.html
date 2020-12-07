@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random strong password</title>
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
-    
     <div id="content">
-
         <div id="setting">
 
             <div class="box">
                 <input type="checkbox" id="Symbol" class="checkbox" hidden checked>
-                <label for="Symbol" class="checkmark"></label> Symbol
+                <label for="Symbol" class="checkmark"></label> 
+                <p class="checkboxText">Symbol</p> 
             </div>
 
             <div class="box">
                 <input type="checkbox" id="Number" class="checkbox" hidden>
-                <label for="Number" class="checkmark"></label> Number
+                <label for="Number" class="checkmark"></label>
+                <p class="checkboxText">Number</p> 
             </div>
 
             <div class="box">
                 <input type="checkbox" id="Upper" class="checkbox" hidden checked>
-                <label for="Upper" class="checkmark"></label> First letter upper case
+                <label for="Upper" class="checkmark"></label> 
+                <p class="checkboxText">First letter upper case</p> 
             </div>
 
             <div id="sliderdiv">
@@ -36,7 +37,6 @@
 
         </div>
         <div id="output">
-
             <input type="text" id="password-output" title="password">
 
             <div id="rest" title="Rest">
@@ -46,13 +46,12 @@
             <div id="copy" title="Copy">
                 <i class="far fa-copy"></i>            
             </div>
-            
         </div>
-
     </div>
 
     <script src="./assets/js/clipborder.js"></script>
     <script src="./assets/js/password.js"></script>
     <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/checkboxText.js"></script>
 </body>
 </html>
